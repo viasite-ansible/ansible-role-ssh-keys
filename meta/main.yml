@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Stanislav Popov
+  company: Viasite
+  description: Add and remove ssh public keys from users
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+  categories:
+    - system
+dependencies: []
