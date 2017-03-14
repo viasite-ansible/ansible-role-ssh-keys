@@ -6,7 +6,11 @@ sudo: required
 services:
   - docker
 
-install: pip install molecule docker-py
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
+install:
+  - pip install molecule
 script:
   - export MOLECULE_APTPROXY_PATH="$PWD/00aptproxy" && touch "$MOLECULE_APTPROXY_PATH"
   - molecule --debug test

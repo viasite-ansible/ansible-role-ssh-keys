@@ -1,3 +1,13 @@
+[![Build Status](https://travis-ci.org/viasite-ansible/ansible-role-ssh-keys.svg?branch=master)](https://travis-ci.org/viasite-ansible/ansible-role-ssh-keys)
+
+Add your public SSH keys to .ssh/authorized_keys of `ssh_keys_user`.
+
+Keys could be files or variables.
+
+Can remove obslolette SSH keys from list of `ssh_keys_public_keys_removed_dir` or `ssh_keys_public_keys_removed`.
+
+Tested on Ubuntu 14.04, 16.04.
+
 ## Example playbook
 
 You can define public keys via files or via variables:
