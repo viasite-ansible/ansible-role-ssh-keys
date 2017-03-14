@@ -1,4 +1,6 @@
 ---
 ssh_keys_user: "{{ ansible_user_id }}"
-ssh_keys_public_keys_dir: ../../vars/ssh-public-keys
-ssh_keys_public_keys_removed_dir: ../../vars/ssh-public-keys-removed
+ssh_keys_public_keys_dir: files/ssh-public-keys
+ssh_keys_public_keys_removed_dir: files/ssh-public-keys-removed
+ssh_keys_public_keys: []
+ssh_keys_public_keys_removed: []
