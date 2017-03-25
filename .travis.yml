@@ -1,5 +1,4 @@
 ---
-
 language: python
 python: "2.7"
 sudo: required
@@ -11,9 +10,10 @@ before_install:
   - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
 install:
   - pip install molecule docker
-script:
+before_script:
   - export MOLECULE_APTPROXY_PATH="$PWD/00aptproxy" && touch "$MOLECULE_APTPROXY_PATH"
-  - molecule --debug test
+script:
+  - molecule test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
